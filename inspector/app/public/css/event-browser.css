@@ -1,0 +1,86 @@
+.event-browser *.table>.header>*>* {
+	padding: 1em 2em;
+}
+
+.event-browser *.table>.header>* {
+	
+}
+
+.event-browser *.table>.header {
+	background-color: #2980b9;
+	color: white;
+}
+
+.event-browser *.table>.body>*:first-child>* {
+	border-top-width: 1px;
+}
+
+.event-browser *.table>.body>*:first-child {
+	
+}
+
+.event-browser *.table>.body>*>*:first-child:before {
+	font-family: FontAwesome;
+	content: '\f105';
+	padding-right: 0.5em;
+	color: transparent;
+}
+
+.event-browser *.table>.body>*>*:first-child {
+	border-left-width: 1px;
+	border-left-color: black;
+}
+
+.event-browser *.table>.body>*>*:last-child:after {
+	font-family: FontAwesome;
+	content: '\f104';
+	padding-left: 0.5em;
+	color: transparent;
+}
+
+.event-browser *.table>.body>*>*:last-child {
+	border-right-width: 1px;
+	border-right-color: black;
+}
+
+.event-browser *.table>.body>*>* {
+	border-style: solid;
+	border-left-color: #bdc3c7;
+	border-right-color: #bdc3c7;
+	border-top-color: black;
+	border-bottom-color: black;
+	border-left-width: 0;
+	border-top-width: 0;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	padding: 1em 2em;
+}
+
+.event-browser *.table>.body>*:hover>*:first-child:before {
+	color: blue;
+}
+
+.event-browser *.table>.body>*:hover>*:last-child:after {
+	color: blue;
+}
+
+.event-browser *.table>.body>*:hover {
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.event-browser *.table>.body>* {
+	cursor: pointer;
+}
+
+.event-browser *.table>.body {
+	
+}
+
+.event-browser *.table {
+	
+}
+
+.event-browser {
+	font-family: verdana;
+	font-size: 12pt;
+}

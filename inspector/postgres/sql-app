@@ -1,0 +1,49 @@
+#!/bin/bash
+
+group="env"
+
+# set namespaced app key
+app="map-$group"
+
+# setup psql command
+db=$(cat ./config/database)
+psql=$(cat ./config/psql)
+exec="$psql -d $db -f"
+
+# assert database exists
+pgdir=$(dirname $psql)
+"$pgdir/createdb" $db
+
+
+# sql dir
+pushd ./postgis/geotracer
+	$exec "$group".drop.sql
+	$exec drop.sql
+	$exec create.sql
+	$exec "$group".create.sql
+popd
+
+
+# data dir
+pushd ../data
+
+	# purge older outputs
+	rm -rf ./output/"$app"
+
+	# batch process input files
+	for device in ./input/*; do
+		for file in "$device"/*; do
+			echo; echo "----- $file -----"
+			# ./decode -p "$file" "$app"
+			echo
+		done
+	done
+
+	# batch process output files
+	for device in ./output/"$app"/*; do
+		for file in "$device"/*; do
+			echo $exec "$file"
+			# $exec "$file"
+		done
+	done
+popd

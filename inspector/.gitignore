@@ -1,0 +1,13 @@
+
+./backup-data
+
+./data/input
+./data/output
+./data/tmp
+./data/logs
+
+./postgres/geoms
+./postgres/sql-app
+./postgres/load-all-inputs
+
+./scrap

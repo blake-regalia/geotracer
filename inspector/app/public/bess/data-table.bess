@@ -1,0 +1,29 @@
+
+cell-padding: 0.5em 1.5em;
+
+/ .data {
+	/ *.table {
+		font-family: monospace;
+		font-size: 9pt;
+
+		/ >.header {
+			background-color: #d35400;
+			color: white;
+
+			/ >* {
+				/ >* {
+					padding: $cell-padding;
+				}
+			}
+		}
+
+		/ >.body {
+
+			/ >* {
+				/ >* {
+					padding: $cell-padding;
+				}
+			}
+		}
+	}
+}

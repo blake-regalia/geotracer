@@ -1,0 +1,44 @@
+
+
+Wap {
+	bssid WapBssid
+	ssid WapSsid
+}
+
+WapBssid {
+	bssid
+}
+
+WapSsid {
+	ssid
+}
+
+WapSecurity {
+	security
+}
+
+
+
+
+
+WapSecurity WapSecurity_Wpa2Psk {
+	
+}
+
+
+Wap Wap_02AEFF326A71_V2lyZWxlc3MtTWFpbg==_7125 {
+	bssid WapBssid_02AEFF326A71
+	ssid WapSsid_V2lyZWxlc3MtTWFpbg==
+	frequency +
+	security WapSecurity_Wpa2Psk
+}
+
+
+Observed_Wap [] {
+	rssi -128
+	location {
+		latitude 37.11427318
+		longitude -119.31726102
+	}
+	wap Wap_02AEFF326A71_V2lyZWxlc3MtTWFpbg==_7125
+}

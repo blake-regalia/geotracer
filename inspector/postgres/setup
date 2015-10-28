@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# fetch group types
+let i=0;
+while IFS=$'\n' read -r line_data; do
+	groups[i]="${line_data}"
+	((++i))
+done < ./config/groups
+
+# setup psql command
+db=$(cat ./config/database)
+psql=$(cat ./config/psql)
+exec="$psql -d $db -f"
+
+# create database
+pgdir=$(dirname $psql)
+"$pgdir/createdb" $db
+
+
+# sql dir
+pushd ./sql
+	
+	# create main table
+	$exec create.sql
+
+	# create all group types
+	for group in "${groups[@]}"; do
+		$exec "$group".create.sql
+	done
+popd

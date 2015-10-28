@@ -1,0 +1,23 @@
+Beacon Battery Loaded
+Emits Packets for exactly 5 seconds w/
+	actual hardware address [A4:D8:56:__:__:__]
+	advertisement data 
+
+
+Continuously emits same packet
+	new random hardware address
+	advertisement data (persistent across reloads)
+
+
+
+?? Initialization Frame
+[A4:D8:56:03:81:61] 0201061107 AD7700C6 A00099B2E2114C24004F0C96080947696D62616C20051250002003020A000000000000000000000000000000000000000000000000
+[A4:D8:56:04:CB:8D] 0201061107 AD7700C6 A00099B2E2114C24004F0C96080947696D62616C20051250002003020A000000000000000000000000000000000000000000000000
+                               ^^Gimbal
+
+?? Persistent iBeacon Mode Frames
+[A4:D8:56:03:81:61] 0201061AFF4C000215 00000000000000005711000000000094 164F 005E C2 0000000000000000000000000000000000000000000000000000000000000000
+[A4:D8:56:04:CB:8D] 0201061AFF4C000215 00000000000000005711000000000087 164F 0057 C2 0000000000000000000000000000000000000000000000000000000000000000
+                    0 1 2 3 4 5 6 7 8  9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4  5 6  7 8  9  0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 
+                                        1                   2                       3                   4
+                     iBeacon prefix              proximity uid          maj. min. 

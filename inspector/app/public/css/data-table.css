@@ -1,0 +1,33 @@
+.data *.table>.header>*>* {
+	padding: 0.5em 1.5em;
+}
+
+.data *.table>.header>* {
+	
+}
+
+.data *.table>.header {
+	background-color: #d35400;
+	color: white;
+}
+
+.data *.table>.body>*>* {
+	padding: 0.5em 1.5em;
+}
+
+.data *.table>.body>* {
+	
+}
+
+.data *.table>.body {
+	
+}
+
+.data *.table {
+	font-family: monospace;
+	font-size: 9pt;
+}
+
+.data {
+	
+}

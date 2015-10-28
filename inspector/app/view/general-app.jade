@@ -1,0 +1,30 @@
+doctype html
+html(lang="en")
+	head
+		title= title
+		link(rel='stylesheet',href='/css/font-awesome.min.css')
+		link(rel='stylesheet',href='/css/leaflet.css')
+		link(rel='stylesheet',href='/css/leaflet-draw.css')
+		link(rel='stylesheet',href='/css/leaflet-label.css')
+		link(rel='stylesheet',href='/css/leaflet-help.css')
+		link(rel='stylesheet',href='/css/displays.css')
+		link(rel='stylesheet',href='/css/data-table.css')
+		link(rel='stylesheet',href='/css/event-browser.css')
+		link(rel='stylesheet',href='/css/'+app_key+'.css')
+	body
+		script(type='text/javascript').
+			var H_QUERY = !{JSON.stringify(query)};
+			var SI_APP_KEY = !{JSON.stringify(app_key)};
+			var P_DATA_SOURCE = !{JSON.stringify(data_url)};
+			var H_DATA_FILES = !{JSON.stringify(data_files)};
+		script(type='text/javascript',src='/js/kit.jquery-2.1.1.min.js')
+		script(type='text/javascript',src='/js/kit.d3.min.js')
+		script(type='text/javascript',src='/js/kit.leaflet.min.js')
+		script(type='text/javascript',src='/js/kit.leaflet-draw.js')
+		script(type='text/javascript',src='/js/kit.leaflet-label.js')
+		script(type='text/javascript',src='/js/kit.postgres.js')
+		script(type='text/javascript',src='/js/kit-helper.js')
+		script(type='text/javascript',src='/js/util.date-format.js')
+		script(type='text/javascript',src='/js/class.table.js')
+		script(type='text/javascript',src='/js/class.event-browser.js')
+		script(type='text/javascript',src='/js/run.'+app_key+'.js')

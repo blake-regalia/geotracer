@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# setup psql command
+db=$(cat ./config/database)
+psql=$(cat ./config/psql)
+exec="$psql -d $db -f"
+
+
+# data dir
+pushd ../data
+
+	# purge older outputs
+	rm -rf ./output/*
+
+	# batch process input files
+	for device in ./input/*; do
+		for file in "$device"/*; do
+			echo; echo "----- $file -----"
+			./decode -p "$file" "$app"
+			echo
+		done
+	done
+
+	# batch process output files
+	for device in ./output/"$app"/*; do
+		for file in "$device"/*; do
+			$exec "$file"
+		done
+	done
+popd
