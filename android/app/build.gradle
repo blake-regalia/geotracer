@@ -1,0 +1,29 @@
+apply plugin: 'com.android.application'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "org.apache.httpcomponents:httpmime:4.2.1"
+}
+
+android {
+    compileSdkVersion 18
+    buildToolsVersion "20.0.0"
+
+    packagingOptions {
+        exclude "META-INF/NOTICE.txt"
+        exclude "META-INF/LICENSE.txt"
+    }
+
+    defaultConfig {
+        applicationId "net.blurcast.tracer"
+        minSdkVersion 18
+        targetSdkVersion 18
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_5
+            targetCompatibility JavaVersion.VERSION_1_5
+        }
+    }
+}

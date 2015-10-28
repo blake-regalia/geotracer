@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView style="@style/list_group_title"
+        android:text="@string/app.main.location"/>
+
+    <RelativeLayout style="@style/list_item"
+        android:id="@+id/app.main.location.gps">
+
+        <TextView style="@style/list_item_title"
+            android:id="@+id/app.main.location.gps.title"
+            android:text="@string/app.main.location.gps.title"
+            android:drawableLeft="@drawable/ic_action_location_searching"
+            />
+
+        <Switch style="@style/list_item_switch"
+            android:id="@+id/app.main.location.gps.switch"
+            android:enabled="false"/>
+
+    </RelativeLayout>
+
+
+    <TextView style="@style/list_group_title"
+        android:text="@string/app.main.logger"/>
+
+    <RelativeLayout style="@style/list_item"
+        android:id="@+id/app.main.logger.wap">
+
+
+        <TextView style="@style/list_item_title"
+            android:id="@+id/app.main.logger.wap.title"
+            android:text="@string/app.main.logger.wap.title"
+            android:drawableLeft="@drawable/ic_action_network_wifi"
+            />
+
+        <Switch style="@style/list_item_switch"
+            android:id="@+id/app.main.logger.wap.switch"
+            android:enabled="false" />
+
+    </RelativeLayout>
+
+    <View style="@style/list_item_divide"/>
+
+    <RelativeLayout style="@style/list_item"
+        android:id="@+id/app.main.logger.btle">
+
+        <TextView style="@style/list_item_title"
+            android:id="@+id/app.main.logger.btle.title"
+            android:text="@string/app.main.logger.btle.title"
+            android:drawableLeft="@drawable/ic_action_bluetooth"/>
+
+        <Switch style="@style/list_item_switch"
+            android:id="@+id/app.main.logger.btle.switch"/>
+
+    </RelativeLayout>
+
+    <View style="@style/list_item_divide"/>
+
+    <RelativeLayout style="@style/list_item"
+        android:id="@+id/app.main.logger.env">
+
+        <TextView style="@style/list_item_title"
+            android:id="@+id/app.main.logger.env.title"
+            android:text="@string/app.main.logger.env.title"
+            android:drawableLeft="@drawable/ic_action_cloud"/>
+
+        <Switch style="@style/list_item_switch"
+            android:id="@+id/app.main.logger.env.switch"/>
+
+    </RelativeLayout>
+
+    <View style="@style/list_item_divide"/>
+
+    <RelativeLayout style="@style/list_item"
+        android:id="@+id/app.main.logger.cell">
+
+        <TextView style="@style/list_item_title"
+            android:id="@+id/app.main.logger.cell.title"
+            android:text="@string/app.main.logger.cell.title"
+            android:drawableLeft="@drawable/ic_action_network_cell"/>
+
+        <Switch style="@style/list_item_switch"
+            android:id="@+id/app.main.logger.cell.switch"/>
+
+    </RelativeLayout>
+
+    <View style="@style/list_item_divide"/>
+
+    <RelativeLayout style="@style/list_item"
+        android:id="@+id/app.main.logger.mic">
+
+        <TextView style="@style/list_item_title"
+            android:id="@+id/app.main.logger.mic.title"
+            android:text="@string/app.main.logger.mic.title"
+            android:drawableLeft="@drawable/ic_action_mic"/>
+
+        <Switch style="@style/list_item_switch"
+            android:id="@+id/app.main.logger.mic.switch"/>
+
+    </RelativeLayout>
+
+    <View style="@style/list_item_divide"/>
+
+</LinearLayout>

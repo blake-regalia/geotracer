@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal" android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/list_item_title"
+            android:id="@+id/app.data.list.item.name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="{NAME}"/>
+
+        <TextView
+            android:id="@+id/app.data.list.item.value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="{VALUE}"/>
+    </LinearLayout>
+
+    <TextView
+        style="@style/list_item_title.sub"
+        android:id="@+id/app.data.list.item.subtitle"
+        android:text="{SUBTITLE}"
+        />
+
+</LinearLayout>
