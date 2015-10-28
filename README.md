@@ -7,7 +7,7 @@
 Minimum SDK version: 18 (Android 4.3+)
 
 ### Installation
-Push the [app-debug.apk file](android/build/app/build/outputs/apk) to your android device:
+Push the [geotracer.apk file](android/dist/geotracer.apk) to your android device:
 ```shell
 cd ./geotracer
 adb install ./android/dist/geotracer.apk
