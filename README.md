@@ -34,7 +34,17 @@ This can be used by the inspector's web app upload page
 
 ### Usage
 
-To use decoder manually:
+The inspector's web app is for viewing data through a GUI; however it is incomplete at this time. You may try using it by starting the server:
+```
+cd ./inspector/app/src
+node server.js
+```
+And then opening that URL with the app name as the path; for example:
+ * [http://localhost:1551/map-wap](http://localhost:1551/map-wap)
+ * [http://localhost:1551/btle-rssi](http://localhost:1551/btle-rssi)
+
+
+To use the decoder manually:
 ```
 Usage: android-geotracer-decoder(agd) [options] app
   app: can be one of the following
@@ -72,3 +82,4 @@ cd ./inspector/data
 # extracts wireless-acces-point data w/ location data and outputs data in SQL format
 ./decode -d $DEVICE_DIR -f $TRACE_FILE map-wap -o sql
 ```
+
